@@ -9,8 +9,8 @@
     
     <style name="headline">
         <item name="android:fontFamily">@font/fredoka_one_regular</item>
-        <item name="android:fontWeight">600</item>
     </style>
+
     <style name="headline.large">
         <item name="android:textSize">28sp</item>
         <item name="lineHeight">42sp</item>
@@ -27,8 +27,6 @@
 
     <style name="title">
         <item name="android:fontFamily">@font/fredoka_one_regular</item>
-        <item name="android:fontWeight">600</item>
-
     </style>
 
     <style name="title.large">
@@ -47,8 +45,6 @@
 
     <style name="body">
         <item name="android:fontFamily">@font/fredoka_regular</item>
-        <item name="android:fontWeight">400</item>
-
     </style>
 
     <style name="body.large">
@@ -59,15 +55,13 @@
         <item name="android:textSize">16sp</item>
         <item name="lineHeight">24sp</item>
     </style>
-    <style name="body.high">
+    <style name="body.small">
         <item name="android:textSize">14sp</item>
         <item name="lineHeight">22sp</item>
     </style>
 
-    <style name="lable">
+    <style name="label">
         <item name="android:fontFamily">@font/fredoka_one_regular</item>
-        <item name="android:fontWeight">500</item>
-
     </style>
 
     <style name="label.large">
