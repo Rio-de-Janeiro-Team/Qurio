@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Qurio</string>
+
+    <string name="points_title">Points</string>
+
+    <string name="lives_title">Lives</string>
+
+    <string name="awards_title">Awards</string>
 </resources>

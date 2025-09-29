@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/statusLivesCard"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_lives" />
+
+    <TextView
+        android:id="@+id/tvLivesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/lives_title"
+        android:textColor="#8095A0AC"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ivCup"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/img_heart"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLivesValue"
+        app:layout_constraintEnd_toStartOf="@+id/tvLivesValue"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@+id/tvLivesValue" />
+
+    <TextView
+        android:id="@+id/tvLivesValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="9dp"
+        android:fontFamily="sans-serif-black"
+        android:includeFontPadding="false"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvLivesTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvLivesTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvLivesTitle"
+        tools:text="9" />
+
+    <ImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/img_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
