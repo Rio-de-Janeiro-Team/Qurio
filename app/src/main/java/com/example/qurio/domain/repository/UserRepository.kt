@@ -1,21 +1,21 @@
 package com.example.qurio.domain.repository
 
 import com.example.qurio.domain.entity.Achievement
-import com.example.qurio.domain.entity.UserAvatar
+import com.example.qurio.domain.entity.UserCharacter
 
 interface UserRepository {
-    suspend fun getAvatar(): UserAvatar
-    fun setAvatar(avatar: UserAvatar)
+    suspend fun getCharacter(): UserCharacter
+    suspend fun setCharacter(avatar: UserCharacter)
 
     suspend fun getLives(): Int
-    fun addLives(lives: Int)
+    suspend fun addLives(lives: Int)
 
-    suspend fun getUserCoinsBalance(): Int
-    fun changeCoinsBalance(coinChange: Int)
+    suspend fun getCoinsBalance(): Int
+    suspend fun changeCoinsBalance(coinChange: Int)
 
     suspend fun getAchievements(): List<Achievement>
-    fun setAchievementStaus(achievementName: String, isAchieved: Boolean )
+    suspend fun setAchievementStatus(achievementName: String, isAchieved: Boolean )
 
     suspend fun getStreak(): Int
-    fun setStreak(streak: Int)
+    suspend fun setStreak(streak: Int)
 }
