@@ -31,7 +31,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#0B0F14"
+                android:background="@color/surface_high"
                 android:clipChildren="false"
                 android:clipToPadding="false">
 
@@ -49,12 +49,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/fredoka_one_regular"
-                        android:text="reward"
+                        style="@style/title.small"
+                        android:text="@string/reward"
                         android:textAlignment="center"
-                        android:textColor="#DEFFFFFF"
-                        android:textFontWeight="400"
-                        android:textSize="16sp" />
+                        android:textColor="@color/shade_primary"
+                        />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -72,11 +71,10 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginStart="4dp"
-                            android:fontFamily="@font/fredoka_one_regular"
                             android:text="500"
-                            android:textColor="#DEFFFFFF"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
+                            style="@style/title.medium"
+                            android:textColor="@color/shade_primary"
+                            />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -99,20 +97,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:fontFamily="@font/fredoka_one_regular"
-                        android:text="Correct"
-                        android:textColor="#99FFFFFF"
-                        android:textSize="14sp" />
+                        android:text="@string/correct"
+                        android:textColor="@color/shade_secondary"
+                        style="@style/body.small" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:fontFamily="@font/fredoka_one_regular"
                         android:text="50"
-                        android:textColor="#DEFFFFFF"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/shade_primary"
+                        style="@style/label.medium"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -132,20 +127,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:fontFamily="@font/fredoka_one_regular"
-                        android:text="Incorrect"
-                        android:textColor="#99FFFFFF"
-                        android:textSize="14sp" />
+                        android:text="@string/incorrect"
+                        android:textColor="@color/shade_secondary"
+                        style="@style/body.small" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:fontFamily="@font/fredoka_one_regular"
+                        android:textColor="@color/shade_primary"
+                        style="@style/label.medium"
                         android:text="10"
-                        android:textColor="#DEFFFFFF"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                         />
                 </LinearLayout>
 
                 <LinearLayout
@@ -167,20 +160,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:fontFamily="@font/fredoka_one_regular"
-                        android:text="Skipped"
-                        android:textColor="#99FFFFFF"
-                        android:textSize="14sp" />
+                        android:text="@string/skipped"
+                        android:textColor="@color/shade_secondary"
+                        style="@style/body.small" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:fontFamily="@font/fredoka_one_regular"
+                        android:textColor="@color/shade_primary"
+                        style="@style/label.medium"
                         android:text="0"
-                        android:textColor="#DEFFFFFF"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
@@ -221,15 +212,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="10dp"
-            android:fontFamily="@font/fredoka_one_regular"
-            android:lineHeight="36sp"
             android:shadowColor="#1980B2"
             android:shadowDx="0.0"
             android:shadowDy="2.0"
             android:shadowRadius="2.0"
             android:text="Great Job"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textColor="@color/on_primary"
+            style="@style/headline.medium"
             app:layout_constraintBottom_toBottomOf="@id/top"
             app:layout_constraintEnd_toEndOf="@id/top"
             app:layout_constraintStart_toStartOf="@id/top"
