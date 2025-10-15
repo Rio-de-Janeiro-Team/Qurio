@@ -1,7 +1,16 @@
 <resources>
     <string name="app_name">Qurio</string>
+    <string name="geography">Geography</string>
+    <string name="science">Science</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="points_title">Points</string>
+
+    <string name="lives_title">Lives</string>
+
+    <string name="awards_title">Awards</string>
+
     <string name="reward">reward</string>
     <string name="correct">Correct</string>
     <string name="incorrect">Incorrect</string>
