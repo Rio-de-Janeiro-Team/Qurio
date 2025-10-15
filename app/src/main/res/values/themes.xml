@@ -100,4 +100,41 @@
         <item name="android:fontFamily">@font/fredoka_regular</item>
     </style>
 
+<!--    buttons -->
+    <style name="qurioButton">
+        <item name="android:fontFamily">@font/fredoka_one_regular</item>
+    </style>
+
+    <style name="qurioButton.playButton">
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="qurioButton.playButton.large">
+        <item name="android:background">@drawable/button_play_large_bg</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="qurioButton.playButton.small">
+        <item name="android:background">@drawable/button_play_bg</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="qurioButton.outline">
+        <item name="android:background">@drawable/button_outlined_bg</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="qurioButton.rounded12dp">
+        <item name="android:background">@drawable/button_rounded_12dp</item>
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="qurioButton.rounded16dp">
+        <item name="android:background">@drawable/button_rounded_16dp</item>
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 </resources>
