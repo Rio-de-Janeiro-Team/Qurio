@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="ReusableGameCardView">
+        <attr name="cardImage" format="reference"/>
+        <attr name="cardLabel" format="string"/>
+        <attr name="cardStrokeColor" format="color"/>
+        <attr name="cardOverlayColor" format="color"/>
+    </declare-styleable>
+</resources>
