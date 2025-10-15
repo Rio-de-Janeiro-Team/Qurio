@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")
+    id("kotlin-kapt")
+
+
 }
 
 android {
@@ -44,8 +48,15 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
-
     // Networking
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+    //room
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.transport.runtime)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.runtime)
+    //dagger
+    implementation(libs.dagger)
+    kapt(libs.dagger.compiler)
 }
