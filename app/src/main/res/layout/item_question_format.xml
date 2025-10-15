@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/notched_shape"
+        android:layout_width="0dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/question_format_background"
+        android:orientation="horizontal"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="56dp"
+        android:layout_height="1dp"
+        android:background="@drawable/blue_linear_gradiant"
+        android:rotation="180"
+        android:translationX="5dp"
+        app:layout_constraintEnd_toStartOf="@id/heptagon_shape"
+        app:layout_constraintTop_toTopOf="@id/notched_shape" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="56dp"
+        android:layout_height="1dp"
+        android:background="@drawable/blue_linear_gradiant"
+        android:translationX="-5dp"
+        app:layout_constraintStart_toEndOf="@id/heptagon_shape"
+        app:layout_constraintTop_toTopOf="@id/notched_shape" />
+
+    <FrameLayout
+        android:id="@+id/heptagon_shape"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintDimensionRatio="145:40"
+        app:layout_constraintEnd_toEndOf="@id/notched_shape"
+        app:layout_constraintStart_toStartOf="@id/notched_shape"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:backgroundTint="#00000000"
+            android:outlineSpotShadowColor="#49BAF2"
+            app:cardCornerRadius="50dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:elevation="5dp"
+            android:src="@drawable/heptagon_shape" />
+
+
+    </FrameLayout>
+
+    <TextView
+        style="@style/title.small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q 1/ 12"
+        android:textColor="@color/on_primary"
+        app:layout_constraintBottom_toBottomOf="@+id/heptagon_shape"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/heptagon_shape" />
+
+    <TextView
+        style="@style/body.medium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Which of the following best explains how a country’s physical geography can influence its level of economic development?"
+        android:textAlignment="center"
+        android:textColor="@color/shade_primary"
+        app:layout_constraintBottom_toBottomOf="@+id/notched_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heptagon_shape" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
