@@ -5,7 +5,7 @@
     <color name="secondary">#993397</color>
     <color name="surface">#050C10</color>
     <color name="surface_high">#0B0F14</color>
-    <color name="shade_primary">#DEE1FFFF</color>
+    <color name="shade_primary">#DEFFFFFF</color>
     <color name="shade_secondary">#99FFFFFF</color>
     <color name="shade_tertiary">#61FFFFFF</color>
     <color name="shade_quad">#0AFFFFFF</color>
