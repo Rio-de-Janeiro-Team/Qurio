@@ -1,6 +1,6 @@
 package com.example.qurio.data.source.remote
 
-import com.example.qurio.data.response.CategoryResponseDtoDto
+import com.example.qurio.data.response.CategoryResponseDto
 import com.example.qurio.data.response.QuizResponseDto
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -19,7 +19,7 @@ class QuizApiService: QuizApi {
         return quizApi.getQuiz(amount, category, difficulty)
     }
 
-    override suspend fun getCategories(): CategoryResponseDtoDto {
+    override suspend fun getCategories(): CategoryResponseDto {
         return quizApi.getCategories()
     }
 

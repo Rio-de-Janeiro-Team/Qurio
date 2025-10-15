@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class CategoryResponseDtoDto(
+data class CategoryResponseDto(
     @SerializedName("trivia_categories")
     val triviaCategories: List<TriviaCategoryDto>
 )

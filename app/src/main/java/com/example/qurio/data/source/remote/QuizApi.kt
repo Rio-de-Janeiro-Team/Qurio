@@ -1,6 +1,6 @@
 package com.example.qurio.data.source.remote
 
-import com.example.qurio.data.response.CategoryResponseDtoDto
+import com.example.qurio.data.response.CategoryResponseDto
 import com.example.qurio.data.response.QuizResponseDto
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -14,5 +14,5 @@ interface QuizApi{
     ): QuizResponseDto
 
   @GET("api_category.php")
-  suspend fun getCategories(): CategoryResponseDtoDto
+  suspend fun getCategories(): CategoryResponseDto
  }
