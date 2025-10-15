@@ -69,27 +69,24 @@
     </FrameLayout>
 
     <TextView
+        style="@style/title.small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Q 1/ 12"
-        android:textColor="#FFFFFF"
-        android:textFontWeight="400"
-        android:textSize="16sp"
+        android:textColor="@color/on_primary"
         app:layout_constraintBottom_toBottomOf="@+id/heptagon_shape"
         app:layout_constraintEnd_toStartOf="@+id/view2"
         app:layout_constraintStart_toEndOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/heptagon_shape" />
 
     <TextView
-        android:layout_width="wrap_content"
+        style="@style/body.medium"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:lineHeight="24dp"
         android:text="Which of the following best explains how a country’s physical geography can influence its level of economic development?"
         android:textAlignment="center"
-        android:textColor="#FFFFFFDE"
-        android:textFontWeight="400"
-        android:textSize="24sp"
+        android:textColor="@color/shade_primary"
         app:layout_constraintBottom_toBottomOf="@+id/notched_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

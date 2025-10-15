@@ -5,7 +5,7 @@
         <shape android:shape="rectangle">
             <corners android:radius="16dp" />
             <gradient
-                android:angle="270"
+                android:angle="0"
                 android:startColor="#1F49BAF2"
                 android:centerColor="#050C10"
                 android:endColor="#1F49BAF2"
@@ -20,7 +20,7 @@
         android:bottom="1dp">
         <shape android:shape="rectangle">
             <corners android:radius="16dp"/>
-            <solid android:color="#0B0F14"/>
+            <solid android:color="@color/surface_high"/>
         </shape>
     </item>
 
