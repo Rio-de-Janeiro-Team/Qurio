@@ -45,4 +45,7 @@ dependencies {
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
 
+    // Networking
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
 }
