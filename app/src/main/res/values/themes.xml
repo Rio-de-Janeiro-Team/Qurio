@@ -103,6 +103,7 @@
 <!--    buttons -->
     <style name="qurioButton">
         <item name="android:fontFamily">@font/fredoka_one_regular</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="qurioButton.playButton">
