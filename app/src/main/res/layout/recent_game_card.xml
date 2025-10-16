@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/recent_game_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/recent_game_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/recent_game_date_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/recent_game_date_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/label.medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="22-10-2025"
+            android:textColor="@color/on_primary"
+            app:layout_constraintBottom_toBottomOf="@id/recent_game_date_bar"
+            app:layout_constraintEnd_toEndOf="@id/recent_game_date_bar"
+            app:layout_constraintStart_toStartOf="@id/recent_game_date_bar"
+            app:layout_constraintTop_toTopOf="@id/recent_game_date_bar"
+            tools:text="22-10-2025" />
+
+        <ImageView
+            android:id="@+id/recent_game_left_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recent_game_left_shadow"
+            android:translationX="8dp"
+            app:layout_constraintEnd_toStartOf="@id/recent_game_date_bar"
+            app:layout_constraintTop_toTopOf="@id/recent_game_card" />
+
+        <ImageView
+            android:id="@+id/recent_game_right_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recent_game_right_shadow"
+            android:translationX="-8dp"
+            app:layout_constraintStart_toEndOf="@id/recent_game_date_bar"
+            app:layout_constraintTop_toTopOf="@id/recent_game_card" />
+
+        <TextView
+            android:id="@+id/category"
+            style="@style/body.small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Science and Natural"
+            android:textColor="@color/on_primary"
+            android:translationY="-5dp"
+            app:layout_constraintEnd_toEndOf="@id/recent_game_card"
+            app:layout_constraintStart_toStartOf="@id/recent_game_card"
+            app:layout_constraintTop_toBottomOf="@id/recent_game_date_bar"
+            tools:text="Science and Natural" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/category">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/coinstack" />
+
+            <TextView
+                style="@style/label.medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="304"
+                android:textColor="@color/shade_primary"
+                android:translationY="-3dp"
+                app:coinChangeText="@{304}"
+                tools:text="304" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="@color/shade_quad"
+                android:translationY="-3dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="0.7" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star" />
+
+            <TextView
+                style="@style/label.medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/shade_primary"
+                android:translationY="-3dp"
+                tools:text="3" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.7" />
+
+            <FrameLayout
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="@color/shade_quad"
+                android:translationY="-3dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clock" />
+
+            <TextView
+                style="@style/label.medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1m 33sec"
+                android:textColor="@color/shade_primary"
+                android:translationY="-3dp"
+                tools:text="1m 33sec" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
