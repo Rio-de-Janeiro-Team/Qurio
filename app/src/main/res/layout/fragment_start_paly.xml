@@ -171,7 +171,7 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
-                <!-- TODO: <include layout="@layout/loading_screen" /> -->
+                <include layout="@layout/loading_screen" />
 
             </LinearLayout>
 
@@ -184,7 +184,7 @@
                 android:orientation="vertical"
                 android:visibility="gone">
 
-                <!-- TODO: <include layout="@layout/no_internet_screen" /> -->
+                <include layout="@layout/no_connection_screen" />
 
             </LinearLayout>
 
