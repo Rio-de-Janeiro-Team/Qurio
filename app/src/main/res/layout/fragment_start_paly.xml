@@ -27,7 +27,6 @@
                 android:gravity="center"
                 android:visibility="visible">
 
-
                 <LinearLayout
                     android:id="@+id/topBar"
                     android:layout_width="match_parent"
@@ -74,25 +73,23 @@
                 </LinearLayout>
 
                 <View
+                    android:id="@+id/view4"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@drawable/blue_linear_gradiant"
                     app:layout_constraintBottom_toBottomOf="@+id/topBar" />
 
-                <!-- TODO: Put Timer Component  -->
-                <ProgressBar
-                    android:id="@+id/customTimeComponent"
+                <com.example.qurio.presentation.view.components.TimerProgressBar
+                    android:id="@+id/timer"
                     style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:layout_width="0dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/topBar" />
-
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/answersContainer"
@@ -103,7 +100,7 @@
                     android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/customTimeComponent">
+                    app:layout_constraintTop_toBottomOf="@+id/timer">
 
                     <include
                         android:id="@+id/questionsPager"
@@ -130,7 +127,6 @@
                     </androidx.recyclerview.widget.RecyclerView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
 
                 <LinearLayout
                     android:id="@+id/linearLayout3"
