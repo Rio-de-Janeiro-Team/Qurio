@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")
     id("kotlin-kapt")
     alias(libs.plugins.kotlin.kapt)
 
@@ -34,6 +35,7 @@ android {
         jvmTarget = "11"
     }
     buildFeatures {
+        dataBinding = true
         viewBinding = true
     }
 }
@@ -52,6 +54,14 @@ dependencies {
     // Networking
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+    //room
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.transport.runtime)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.runtime)
+    //dagger
+    implementation(libs.dagger)
+    kapt(libs.dagger.compiler)
 
     // DataStore
     implementation(libs.androidx.datastore.preferences)
