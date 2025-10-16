@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="135dp"
-        android:background="@color/surface"
-        android:paddingHorizontal="16dp">
+        android:paddingHorizontal="16dp"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/recent_game_card"
@@ -41,7 +44,7 @@
             app:layout_constraintEnd_toEndOf="@id/recent_game_date_bar"
             app:layout_constraintStart_toStartOf="@id/recent_game_date_bar"
             app:layout_constraintTop_toTopOf="@id/recent_game_date_bar"
-            tools:text="22-10-2025" />
+        />
 
         <ImageView
             android:id="@+id/recent_game_left_bar"
@@ -72,7 +75,7 @@
             app:layout_constraintEnd_toEndOf="@id/recent_game_card"
             app:layout_constraintStart_toStartOf="@id/recent_game_card"
             app:layout_constraintTop_toBottomOf="@id/recent_game_date_bar"
-            tools:text="Science and Natural" />
+           />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,8 +105,7 @@
                 android:text="304"
                 android:textColor="@color/shade_primary"
                 android:translationY="-3dp"
-                app:coinChangeText="@{304}"
-                tools:text="304" />
+             />
 
             <View
                 android:layout_width="0dp"
@@ -134,7 +136,7 @@
                 android:text="3"
                 android:textColor="@color/shade_primary"
                 android:translationY="-3dp"
-                tools:text="3" />
+               />
 
             <View
                 android:layout_width="0dp"
@@ -165,7 +167,7 @@
                 android:text="1m 33sec"
                 android:textColor="@color/shade_primary"
                 android:translationY="-3dp"
-                tools:text="1m 33sec" />
+               />
 
             <View
                 android:layout_width="0dp"
@@ -178,4 +180,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</layout>
+</androidx.constraintlayout.widget.ConstraintLayout>
