@@ -1,7 +1,6 @@
 [versions]
 agp = "8.12.1"
 androidGifDrawable = "1.2.29"
-daggerCompiler = "2.57.2"
 kotlin = "2.0.21"
 coreKtx = "1.17.0"
 appcompat = "1.7.1"
