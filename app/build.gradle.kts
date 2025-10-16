@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-kapt")
+    alias(libs.plugins.kotlin.kapt)
 
 }
 
@@ -33,7 +34,6 @@ android {
         jvmTarget = "11"
     }
     buildFeatures {
-        dataBinding = true
         viewBinding = true
     }
 }
@@ -52,4 +52,16 @@ dependencies {
     // Networking
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+
+    // DataStore
+    implementation(libs.androidx.datastore.preferences)
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+
+    // Dagger
+    implementation(libs.dagger)
+    kapt(libs.dagger.compiler)
+
+
 }
