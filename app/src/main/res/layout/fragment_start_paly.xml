@@ -139,23 +139,37 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_weight="1"
+                    android:background="@color/surface_high"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
-                    <Button
+                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/checkButton"
+                        style="@style/qurioButton.rounded16dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Check" />
+                        android:layout_marginTop="6dp"
+                        android:backgroundTint="@null"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="10dp"
+                        android:text="Check"
+                        app:layout_constraintEnd_toEndOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="@+id/button1"
+                        app:layout_constraintTop_toBottomOf="@+id/button1" />
 
-                    <Button
+                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/skipButton"
+                        style="@style/qurioButton.outline"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Skip" />
+                        android:layout_marginTop="6dp"
+                        android:backgroundTint="@null"
+                        android:text="Skip"
+                        app:layout_constraintEnd_toEndOf="@+id/button2"
+                        app:layout_constraintStart_toStartOf="@+id/button2"
+                        app:layout_constraintTop_toBottomOf="@+id/button2" />
                 </LinearLayout>
 
                 <include
