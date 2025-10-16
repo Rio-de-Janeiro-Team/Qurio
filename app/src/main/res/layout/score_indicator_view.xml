@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <include
-            android:id="@+id/include2"
+            android:id="@+id/indicator1"
             layout="@layout/score_indicator_item"
             android:layout_width="18dp"
             android:layout_height="18dp"
@@ -17,6 +15,7 @@
             app:layout_constraintStart_toEndOf="@id/guideline9" />
 
         <include
+            android:id="@+id/indicator2"
             layout="@layout/score_indicator_item"
             android:layout_width="18dp"
             android:layout_height="18dp"
@@ -24,6 +23,7 @@
             app:layout_constraintEnd_toEndOf="@id/guideline8" />
 
         <include
+            android:id="@+id/indicator3"
             layout="@layout/score_indicator_item"
             android:layout_width="18dp"
             android:layout_height="18dp"
@@ -31,6 +31,7 @@
             app:layout_constraintEnd_toEndOf="@id/guideline9" />
 
         <include
+            android:id="@+id/indicator4"
             layout="@layout/score_indicator_item"
             android:layout_width="18dp"
             android:layout_height="18dp"
@@ -38,6 +39,7 @@
             app:layout_constraintEnd_toStartOf="@id/guideline8" />
 
         <include
+            android:id="@+id/indicator5"
             layout="@layout/score_indicator_item"
             android:layout_width="18dp"
             android:layout_height="18dp"
@@ -45,6 +47,7 @@
             app:layout_constraintEnd_toEndOf="@id/guideline11" />
 
         <include
+            android:id="@+id/indicator6"
             layout="@layout/score_indicator_item"
             android:layout_width="18dp"
             android:layout_height="18dp"
@@ -52,6 +55,7 @@
             app:layout_constraintEnd_toEndOf="@id/guideline8" />
 
         <include
+            android:id="@+id/indicator7"
             layout="@layout/score_indicator_item"
             android:layout_width="18dp"
             android:layout_height="18dp"
@@ -59,12 +63,12 @@
             app:layout_constraintEnd_toEndOf="@id/guideline11" />
 
         <include
+            android:id="@+id/indicator8"
             layout="@layout/score_indicator_item"
             android:layout_width="18dp"
             android:layout_height="18dp"
             app:layout_constraintBottom_toBottomOf="@id/guideline7"
             app:layout_constraintEnd_toEndOf="@id/guideline11" />
-
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline6"
