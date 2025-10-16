@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scoreIndicatorRoot"
+    android:layout_width="18dp"
+    android:layout_height="18dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/scoreText"
+        style="@style/label.small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/circle_shape"
+        android:gravity="center"
+        android:textColor="@color/surface_high"
+        tools:text="-1" />
+</layout>
