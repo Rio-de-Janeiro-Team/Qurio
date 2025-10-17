@@ -10,4 +10,9 @@
         android:name="com.example.qurio.presentation.view.TempFragment"
         android:label="fragment_temp"
         tools:layout="@layout/fragment_temp" />
+    <fragment
+        android:id="@+id/GamesFragment"
+        android:name="com.example.qurio.presentation.view.GamesFragment"
+        android:label="fragment_games"
+        tools:layout="@layout/fragment_games" />
 </navigation>
