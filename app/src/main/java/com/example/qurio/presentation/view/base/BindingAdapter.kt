@@ -14,3 +14,5 @@ fun setCoinChangeColor(textView: TextView, coinChange: Int) {
     textView.setTextColor(color)
 }
 
+
+

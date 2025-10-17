@@ -3,11 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/tempFragment">
+    app:startDestination="@id/itemQuestionFragment">
 
     <fragment
         android:id="@+id/tempFragment"
         android:name="com.example.qurio.presentation.view.TempFragment"
         android:label="fragment_temp"
         tools:layout="@layout/fragment_temp" />
+
+    <fragment
+        android:id="@+id/itemQuestionFragment"
+        android:name="com.example.qurio.presentation.view.game.GameFragment"
+        android:label="fragment_questions"
+        tools:layout="@layout/fragment_start_paly" />
 </navigation>
