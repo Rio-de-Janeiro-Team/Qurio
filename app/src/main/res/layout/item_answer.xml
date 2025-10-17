@@ -28,6 +28,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textColor="@color/shade_primary"
+            android:text="@{item.answer}"
             tools:text = "Landlocked countries generally have lower transportation costs than coastal countries"/>
     </LinearLayout>
 </layout>

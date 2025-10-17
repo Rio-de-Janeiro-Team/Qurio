@@ -21,7 +21,7 @@ class GameFragment(gamePresenter: GamePresenter) :
         inflater: LayoutInflater,
         container: ViewGroup?
     ): FragmentStartPalyBinding {
-        TODO("Not yet implemented")
+        return FragmentStartPalyBinding.inflate(inflater, container, false)
     }
 
     override fun initViews() {
