@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Qurio</string>
-    <string name="geography">Geography</string>
-    <string name="science">Science</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="points_title">Points</string>
@@ -9,6 +7,16 @@
     <string name="awards_title">Awards</string>
     <string name="every_day_count">Every day count!</string>
     <string name="play_now">Play Now</string>
+    <string name="category_music">Music</string>
+    <string name="category_food_drink">Food &amp; Drink</string>
+    <string name="category_geography">Geography</string>
+    <string name="category_general_knowledge">General Knowledge</string>
+    <string name="category_film_tv">Film &amp; TV</string>
+    <string name="category_society_culture">Society &amp; Culture</string>
+    <string name="category_history">History</string>
+    <string name="category_science">Science</string>
+    <string name="category_sport_leisure">Sport &amp; Leisure</string>
+    <string name="category_arts_literature">Arts &amp; Literature</string>
 
 
 </resources>
