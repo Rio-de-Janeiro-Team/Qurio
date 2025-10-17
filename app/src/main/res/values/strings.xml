@@ -9,6 +9,17 @@
     <string name="awards_title">Awards</string>
     <string name="every_day_count">Every day count!</string>
     <string name="play_now">Play Now</string>
+    <string name="swipe_up_to_play">Swipe up to PLAY!</string>
+    <string name="welcome_to_the_world">Swipe up to PLAY!</string>
+    <string name="welcome_to_qurio">Welcome to Qurio</string>
+    <string name="brain_image">Brain Image</string>
+    <string name="description1">Welcome to the world of Qurio, where questions spark curiosity and prizes await the smartest. Ready to begin the challenge?</string>
+    <string name="choose_your_character">Choose your character</string>
+    <string name="description2">Each hero has their own unique style! Choose from unique characters and start your adventure in your own style.</string>
+    <string name="challenge_and_win">Challenge and win</string>
+    <string name="description3">Answer quickly, earn points, and share with your\n friends!\n Each trivia category is a new experience.</string>
+    <string name="collect_them_all">Collect them all!</string>
+     <string name="description4">Unlock characters, earn badges, and climb the leaderboards. Qurio is merciless, but you can handle it.</string>
 
 
 </resources>
