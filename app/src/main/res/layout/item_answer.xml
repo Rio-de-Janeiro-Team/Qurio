@@ -6,6 +6,10 @@
         <variable
             name="item"
             type="com.example.qurio.presentation.view.game.Answer" />
+
+        <variable
+            name="listener"
+            type="com.example.qurio.presentation.view.game.GameInterActionListener" />
     </data>
     <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"
@@ -18,6 +22,7 @@
         android:gravity="center"
         android:background="@drawable/answer_background"
         android:orientation="horizontal"
+        android:onClick="@{(v) -> listener.onClickOnAnswer(item,v)}"
         android:padding="12dp">
 
         <TextView

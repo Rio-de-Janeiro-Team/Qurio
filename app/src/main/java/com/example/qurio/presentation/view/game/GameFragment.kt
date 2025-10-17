@@ -4,19 +4,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
+import com.example.qurio.R
 import com.example.qurio.base.BaseFragment
 import com.example.qurio.databinding.FragmentStartPalyBinding
 import com.example.qurio.domain.entity.Question
 import com.example.qurio.presentation.presenter.GamePresenter
 import kotlinx.coroutines.launch
 
-class GameFragment(gamePresenter: GamePresenter) :
+class GameFragment() :
     BaseFragment<FragmentStartPalyBinding, GameView, GamePresenter>(), GameView,
     GameInterActionListener {
-    override val presenter: GamePresenter = gamePresenter
+    override val presenter: GamePresenter = GamePresenter()
     val allQuestions: MutableList<Question> = mutableListOf()
-    val adapter = GameAdapter(emptyList())
+
+    var currentSelectedAnswer: Answer? = null
+    val adapter = GameAdapter(emptyList(),this)
     override fun getViewBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
@@ -25,7 +29,23 @@ class GameFragment(gamePresenter: GamePresenter) :
     }
 
     override fun initViews() {
-        TODO("Not yet implemented")
+        binding.skipButton.setOnClickListener {
+            setQuestion()
+            binding.answersLayout.setBackgroundColor(
+                requireContext().getColor(R.color.surface)
+            )
+        }
+        binding.checkButton.setOnClickListener {
+            if (currentSelectedAnswer?.isCorrect == true) {
+                binding.answersLayout.setBackgroundColor(
+                    requireContext().getColor(R.color.green)
+                )
+            } else {
+                binding.answersLayout.setBackgroundColor(
+                    requireContext().getColor(R.color.red)
+                )
+            }
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,6 +59,7 @@ class GameFragment(gamePresenter: GamePresenter) :
         viewLifecycleOwner.lifecycleScope.launch {
             presenter.getQuestions()
         }
+        initViews()
     }
 
     private fun setUpAdapter() {
@@ -52,6 +73,11 @@ class GameFragment(gamePresenter: GamePresenter) :
 
     override fun onClickGetNextQuestion() {
         setQuestion()
+    }
+
+    override fun onClickOnAnswer(answer: Answer,view: View) {
+        view.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.primary))
+        currentSelectedAnswer = answer
     }
 
     fun setQuestion() {
