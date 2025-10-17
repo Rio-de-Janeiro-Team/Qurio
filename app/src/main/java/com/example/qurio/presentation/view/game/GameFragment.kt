@@ -19,7 +19,16 @@ class GameFragment() :
     override val presenter: GamePresenter = GamePresenter()
     val allQuestions: MutableList<Question> = mutableListOf()
 
+     var numberOfQuestions: Int = 0
+
     var currentSelectedAnswer: Answer? = null
+    var isAnswerSelected: Boolean = false
+
+    var currentViewId: Int? = null
+
+    var currentView: View? = null
+
+    var question = 1
     val adapter = GameAdapter(emptyList(),this)
     override fun getViewBinding(
         inflater: LayoutInflater,
@@ -36,15 +45,17 @@ class GameFragment() :
             )
         }
         binding.checkButton.setOnClickListener {
-            if (currentSelectedAnswer?.isCorrect == true) {
-                binding.answersLayout.setBackgroundColor(
-                    requireContext().getColor(R.color.green)
-                )
+            if (currentSelectedAnswer?.isCorrect == true && currentView != null) {
+//                    currentView!!.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.green))
+                    currentView!!.background = ContextCompat.getDrawable(requireContext(), R.drawable.correct_answer_background)
+
             } else {
-                binding.answersLayout.setBackgroundColor(
-                    requireContext().getColor(R.color.red)
-                )
+//                currentView!!.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.red))
+                currentView!!.background = ContextCompat.getDrawable(requireContext(), R.drawable.incorrect_answer_background)
             }
+//            binding.answersLayout.setBackgroundColor(
+//                requireContext().getColor(R.color.surface)
+//            )
         }
     }
 
@@ -68,6 +79,7 @@ class GameFragment() :
 
     override fun onGetQuestions(questions: List<Question>) {
         allQuestions.addAll(questions)
+        numberOfQuestions = allQuestions.size
         setQuestion()
     }
 
@@ -76,19 +88,40 @@ class GameFragment() :
     }
 
     override fun onClickOnAnswer(answer: Answer,view: View) {
-        view.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.primary))
-        currentSelectedAnswer = answer
+        currentView = view
+        if (currentViewId == null) currentViewId = view.id
+        if (currentViewId != view.id){
+            val previousSelectedView = binding.answersLayout.findViewById<View>(currentViewId!!)
+//            previousSelectedView.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.surface_high))
+            previousSelectedView.background = ContextCompat.getDrawable(requireContext(), R.drawable.answer_background)
+
+            currentViewId = view.id
+            isAnswerSelected = false
+        }
+        if (isAnswerSelected.not()){
+            view.background = ContextCompat.getDrawable(requireContext(), R.drawable.selected_answer_background)
+            currentSelectedAnswer = answer
+        }
+        else{
+//            view.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.surface_high))
+            view.background = ContextCompat.getDrawable(requireContext(), R.drawable.answer_background)
+
+            currentSelectedAnswer = null
+        }
+        isAnswerSelected = !isAnswerSelected
     }
 
     fun setQuestion() {
         if (allQuestions.isNotEmpty()) {
             val currentQuestion = allQuestions.first()
             binding.questionsPager.questionText.text = currentQuestion.question
+            binding.questionsPager.questionNumber.setText("$question / $numberOfQuestions")
             val answers = (currentQuestion.incorrectAnswers.map { Answer(it, false) } +
                     Answer(currentQuestion.correctAnswer, true))
                 .shuffled()
             adapter.setItems(answers)
             allQuestions.removeAt(0)
+            question += 1
         }
     }
 
