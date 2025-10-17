@@ -1,21 +1,27 @@
 package com.example.qurio.presentation
 
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.example.qurio.R
-import com.example.qurio.presentation.view.GamesFragment
+import com.example.qurio.presenter.repository.UserPreferences
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
+
+    @Inject
+    lateinit var userPreferences: UserPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
-        if (savedInstanceState == null) {
-            val gamesFragment = GamesFragment()
-
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, gamesFragment)
-                .commit()
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
     }
 }
