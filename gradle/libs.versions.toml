@@ -1,14 +1,16 @@
 [versions]
-agp = "8.12.1"
+agp = "8.10.0"
 androidGifDrawable = "1.2.29"
 kotlin = "2.0.21"
 coreKtx = "1.17.0"
 appcompat = "1.7.1"
 material = "1.13.0"
 activity = "1.11.0"
-constraintlayout = "2.1.4"
+constraintlayout = "2.2.1"
 navigationUi = "2.9.5"
 retrofit = "3.0.0"
+recyclerview = "1.4.0"
+cardview = "1.0.0"
 datastorePreferencesCore = "1.1.7"
 kotlinxCoroutinesCoreVersion = "1.10.2"
 daggerAndroid = "2.57.2"
@@ -29,6 +31,8 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferencesCore" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCoreVersion" }
 dagger = { module = "com.google.dagger:dagger", version.ref = "daggerAndroid" }
@@ -39,4 +43,3 @@ transport-runtime = { group = "com.google.android.datatransport", name = "transp
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt" }
-
