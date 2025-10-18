@@ -1,29 +1,44 @@
 package com.example.qurio.presentation.presenter
 
+import android.util.Log
 import com.example.qurio.base.BasePresenter
 import com.example.qurio.domain.entity.Question
 import com.example.qurio.domain.repository.GameRepository
 import com.example.qurio.presentation.view.game.GameView
 
-class GamePresenter(): BasePresenter<GameView>() {
-     var gameView: GameView? = null
+class GamePresenter(
+    private val gameRepository: GameRepository
+) : BasePresenter<GameView>() {
 
-    suspend fun getQuestions(){
-        val fakeQuestions = listOf(
-            Question(
-                id = 1,
-                question = "what is the capital of egypt",
-                correctAnswer = "Cairo",
-                incorrectAnswers = listOf("Alex", "fayoum", "giza")
-            ),
-            Question(
-                id = 2,
-                question = "who is the president of egypt",
-                correctAnswer = "el-sisi",
-                incorrectAnswers = listOf("morsi", "mubarak", "nasser")
-            ),
+    var gameView: GameView? = null
+
+    fun getQuestions() {
+        tryToCall(
+            block = {
+                gameRepository.getQuestionsByCategoryId(
+                    genreId = 12,
+                    numberOfQuestions = 10
+                )
+            },
+            onStart = { view?.showLoading() },
+            onSuccess = ::onQuestionsSuccess,
+            onError = ::handleError,
+            onEnd = { view?.hideLoading() }
         )
-//        val questions = gameRepository.getQuestionsByCategoryId(genreId = 12, numberOfQuestions = 10)
-        gameView?.onGetQuestions(questions = fakeQuestions)
+    }
+
+    fun onQuestionsSuccess(questions: List<Question>) {
+        Log.i("Questions", "Success: $questions")
+        if (questions.isNotEmpty()) {
+            gameView?.onGetQuestions(questions = questions)
+        } else {
+            gameView?.hideLoading()
+            gameView?.showError("No questions available")
+        }
+    }
+
+    fun handleError(throwable: Throwable) {
+        gameView?.hideLoading()
+        gameView?.showError(throwable.message ?: "Failed to load questions")
     }
 }
