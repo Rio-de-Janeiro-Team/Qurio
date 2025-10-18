@@ -4,7 +4,7 @@ plugins {
     id("com.google.devtools.ksp")
     id("kotlin-kapt")
     alias(libs.plugins.kotlin.kapt)
-
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -74,4 +74,7 @@ dependencies {
     kapt(libs.dagger.compiler)
 
 
+    // Navigation
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 }

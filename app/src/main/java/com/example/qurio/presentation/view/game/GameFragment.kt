@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.navArgs
 import com.example.qurio.R
 import com.example.qurio.base.BaseFragment
 import com.example.qurio.data.repository.GameRepositoryImpl
@@ -32,6 +33,8 @@ class GameFragment() :
 
     val presenter: GamePresenter = GamePresenter(gameRepository)
     val allQuestions: MutableList<Question> = mutableListOf()
+
+    private val args: GameFragmentArgs by navArgs()
 
     var numberOfQuestions: Int = 0
     var currentSelectedAnswer: Answer? = null
@@ -91,7 +94,7 @@ class GameFragment() :
     private fun loadQuestions() {
         if (isNetworkAvailable()) {
             viewLifecycleOwner.lifecycleScope.launch {
-                presenter.getQuestions()
+                presenter.getQuestions(args.genreId)
             }
         } else {
             showNoConnection()

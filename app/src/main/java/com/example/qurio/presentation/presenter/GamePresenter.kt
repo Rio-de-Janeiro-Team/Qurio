@@ -12,11 +12,11 @@ class GamePresenter(
 
     var gameView: GameView? = null
 
-    fun getQuestions() {
+    fun getQuestions(genreId: Int) {
         tryToCall(
             block = {
                 gameRepository.getQuestionsByCategoryId(
-                    genreId = 12,
+                    genreId = genreId,
                     numberOfQuestions = 10
                 )
             },

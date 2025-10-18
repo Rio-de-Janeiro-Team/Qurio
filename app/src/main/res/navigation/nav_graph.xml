@@ -15,11 +15,17 @@
         android:id="@+id/itemQuestionFragment"
         android:name="com.example.qurio.presentation.view.game.GameFragment"
         android:label="fragment_questions"
-        tools:layout="@layout/fragment_start_paly" />
+        tools:layout="@layout/fragment_start_paly">
+        <argument
+            android:name="genreId"
+            app:argType="integer" />
+    </fragment>
+
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.example.qurio.presentation.fragment.OnBoardingFragment"
-        android:label="OnBoardingFragment">
+        android:label="OnBoardingFragment"
+        tools:layout="@layout/fragment_on_boarding">
 
         <action
             android:id="@+id/action_onBoardingFragment_to_tempFragment"
