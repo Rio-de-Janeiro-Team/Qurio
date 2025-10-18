@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/itemQuestionFragment">
+    app:startDestination="@id/onBoardingFragment">
 
     <fragment
         android:id="@+id/tempFragment"
         android:name="com.example.qurio.presentation.view.TempFragment"
-        android:label="fragment_temp"
+        android:label="TempFragment"
         tools:layout="@layout/fragment_temp" />
 
     <fragment
@@ -16,4 +17,15 @@
         android:name="com.example.qurio.presentation.view.game.GameFragment"
         android:label="fragment_questions"
         tools:layout="@layout/fragment_start_paly" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.qurio.presentation.fragment.OnBoardingFragment"
+        android:label="OnBoardingFragment" >
+
+    <action
+        android:id="@+id/action_onBoardingFragment_to_tempFragment"
+        app:destination="@id/tempFragment" />
+    </fragment>
+
+
 </navigation>
