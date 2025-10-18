@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Qurio</string>
+    <string name="games_title">الالعاب</string>
     <string name="category_music">موسيقى</string>
     <string name="category_food_drink">طعام وشراب</string>
     <string name="category_geography">جغرافيا</string>
