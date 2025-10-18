@@ -19,7 +19,7 @@ class GameCategoryAdapter(
             cardView.setCardImage(category.imageId)
             cardView.setColorsByResId(category.strokeColorResId, category.overlayColorResId)
 
-            cardView.setOnClickListener {
+            cardView.setOnPlayButtonClickListener {
                 clickListener(category)
             }
         }

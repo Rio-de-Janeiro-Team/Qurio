@@ -23,9 +23,10 @@
 
     <fragment
         android:id="@+id/GamesFragment"
-        android:name="com.example.qurio.presentation.view.GamesFragment"
+        android:name="com.example.qurio.presentation.view.GamesCategoryFragment"
         android:label="fragment_games"
         tools:layout="@layout/fragment_games" />
+
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.example.qurio.presentation.fragment.OnBoardingFragment"
@@ -36,12 +37,11 @@
             android:id="@+id/action_onBoardingFragment_to_tempFragment"
             app:destination="@id/tempFragment" />
 
-
         <action
-            android:id="@+id/action_onBoardingFragment_to_itemQuestionFragment"
-            app:destination="@id/itemQuestionFragment" />
+            android:id="@+id/action_onBoardingFragment_to_GamesFragment"
+            app:destination="@id/GamesFragment"
+            app:popUpTo="@id/onBoardingFragment"
+            app:popUpToInclusive="true" />
 
     </fragment>
-
-
 </navigation>

@@ -6,6 +6,8 @@ import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
+import androidx.appcompat.widget.AppCompatButton
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColorInt
@@ -22,6 +24,7 @@ class ReusableGameCardView @JvmOverloads constructor(
     private val categoryImage: ShapeableImageView
     private val gradientOverlay: ShapeableImageView
     private val categoryLabel: MaterialTextView
+    private val playButton: AppCompatButton
 
     init {
         LayoutInflater.from(context).inflate(R.layout.games_card, this, true)
@@ -31,6 +34,7 @@ class ReusableGameCardView @JvmOverloads constructor(
         this.cardElevation = 0f
         this.maxCardElevation = 0f
         this.useCompatPadding = false
+        playButton = findViewById(R.id.play_button)
         this.setCardBackgroundColor(ContextCompat.getColor(context, android.R.color.transparent))
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ReusableGameCardView)
 
@@ -78,5 +82,8 @@ class ReusableGameCardView @JvmOverloads constructor(
             colors
         )
         gradientOverlay.background = gradientDrawable
+    }
+    fun setOnPlayButtonClickListener(listener: (View) -> Unit) {
+        playButton.setOnClickListener(listener)
     }
 }
