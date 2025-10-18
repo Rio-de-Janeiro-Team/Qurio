@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/itemQuestionFragment">
     app:startDestination="@id/onBoardingFragment">
 
     <fragment
@@ -20,11 +19,17 @@
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.example.qurio.presentation.fragment.OnBoardingFragment"
-        android:label="OnBoardingFragment" >
+        android:label="OnBoardingFragment">
 
-    <action
-        android:id="@+id/action_onBoardingFragment_to_tempFragment"
-        app:destination="@id/tempFragment" />
+        <action
+            android:id="@+id/action_onBoardingFragment_to_tempFragment"
+            app:destination="@id/tempFragment" />
+
+
+        <action
+            android:id="@+id/action_onBoardingFragment_to_itemQuestionFragment"
+            app:destination="@id/itemQuestionFragment" />
+
     </fragment>
 
 

@@ -23,14 +23,14 @@ import com.example.qurio.presentation.presenter.GamePresenter
 import kotlinx.coroutines.launch
 
 class GameFragment() :
-    BaseFragment<FragmentStartPalyBinding, GameView, GamePresenter>(), GameView,
-    GameInterActionListener {
+    BaseFragment<FragmentStartPalyBinding, GameView>(),
+    GameView, GameInterActionListener {
 
     private val gameRepository: GameRepository = GameRepositoryImpl(
         quizApiService = QuizApiService()
     )
 
-    override val presenter: GamePresenter = GamePresenter(gameRepository)
+    val presenter: GamePresenter = GamePresenter(gameRepository)
     val allQuestions: MutableList<Question> = mutableListOf()
 
     var numberOfQuestions: Int = 0
@@ -50,7 +50,7 @@ class GameFragment() :
         return FragmentStartPalyBinding.inflate(inflater, container, false)
     }
 
-    override fun initViews() {
+      fun initViews() {
         binding.checkButton.isEnabled = false
 
         binding.skipButton.setOnClickListener {
