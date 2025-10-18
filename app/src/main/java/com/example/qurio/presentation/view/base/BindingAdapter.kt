@@ -1,5 +1,6 @@
 package com.example.qurio.presentation.view.base
 
+import android.view.View
 import android.widget.TextView
 import com.example.qurio.R
 
@@ -14,3 +15,17 @@ fun setCoinChangeColor(textView: TextView, coinChange: Int) {
     textView.setTextColor(color)
 }
 
+@BindingAdapter("app:streakText")
+fun setStreakText(textView: TextView, streakNumber: Int) {
+    val text = if (streakNumber == 0) {
+        "0 day streak, start make a series"
+    } else {
+        "$streakNumber day streak, make a big series"
+    }
+    textView.text = text
+}
+
+@BindingAdapter(value = ["streakNumber", "threshold"])
+fun showWhenStreakAbove(view: View, streakNumber: Int, threshold: Int) {
+    view.visibility = if (streakNumber >= threshold) View.VISIBLE else View.GONE
+}

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:background="@drawable/streak_card_background"
+        android:layout_marginHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/streak_fire"
+            android:layout_width="48dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/streak_fire"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/streak_fire_shadow"
+            app:layout_constraintStart_toStartOf="@id/streak_fire"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/streak_fire"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                style="@style/label.medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                tools:text="3 day streak, make a big series"
+                android:textColor="@color/shade_primary" />
+
+            <TextView
+                style="@style/label.xsmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="KEEP IT UP!"
+                android:textColor="@color/shade_secondary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp">
+
+
+                <FrameLayout
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/day_circle">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/streak_fire"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{1}" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{1}"
+                        android:src="@drawable/streak_fire_shadow"/>
+                </FrameLayout>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+
+                <FrameLayout
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/day_circle">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/streak_fire"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{2}" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{2}"
+                        android:src="@drawable/streak_fire_shadow"/>
+
+                </FrameLayout>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/day_circle">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/streak_fire"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{3}" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{3}"
+                        android:src="@drawable/streak_fire_shadow"/>
+                </FrameLayout>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/day_circle">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/streak_fire"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{4}" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{4}"
+                        android:src="@drawable/streak_fire_shadow"/>
+                </FrameLayout>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+
+                <FrameLayout
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/day_circle">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/streak_fire"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{5}" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{5}"
+                        android:src="@drawable/streak_fire_shadow"/>
+                </FrameLayout>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/day_circle">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/streak_fire"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{6}" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{6}"
+                        android:src="@drawable/streak_fire_shadow"/>
+                </FrameLayout>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/day_circle">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/streak_fire"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{7}" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        app:streakNumber="@{4}"
+                        app:threshold="@{7}"
+                        android:src="@drawable/streak_fire_shadow"/>
+                </FrameLayout>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+
+                <TextView
+                    style="@style/label.xsmall"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:text="S"
+                    android:textColor="@color/shade_tertiary" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/label.xsmall"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:text="M"
+                    android:textColor="@color/shade_tertiary" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/label.xsmall"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:text="T"
+                    android:textColor="@color/shade_tertiary" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/label.xsmall"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:text="W"
+                    android:textColor="@color/shade_tertiary" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/label.xsmall"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:text="Th"
+                    android:textColor="@color/shade_tertiary" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/label.xsmall"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:text="F"
+                    android:textColor="@color/shade_tertiary" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    style="@style/label.xsmall"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:text="S"
+                    android:textColor="@color/shade_tertiary" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
