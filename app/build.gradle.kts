@@ -50,7 +50,8 @@ dependencies {
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
     implementation(libs.android.gif.drawable)
-
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.cardview)
     // Networking
     implementation(libs.retrofit)
     implementation(libs.converter.gson)

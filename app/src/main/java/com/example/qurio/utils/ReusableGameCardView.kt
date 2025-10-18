@@ -7,6 +7,7 @@ import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColorInt
 import com.example.qurio.R
 import com.google.android.material.imageview.ShapeableImageView
@@ -27,33 +28,55 @@ class ReusableGameCardView @JvmOverloads constructor(
         categoryImage = findViewById(R.id.category_image)
         gradientOverlay = findViewById(R.id.gradient_overlay)
         categoryLabel = findViewById(R.id.category_label)
-
+        this.cardElevation = 0f
+        this.maxCardElevation = 0f
+        this.useCompatPadding = false
+        this.setCardBackgroundColor(ContextCompat.getColor(context, android.R.color.transparent))
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ReusableGameCardView)
 
         try {
             val imageResId = typedArray.getResourceId(R.styleable.ReusableGameCardView_cardImage, 0)
             if (imageResId != 0) {
-                categoryImage.setImageResource(imageResId)
+                setCardImage(imageResId)
             }
 
             val labelText = typedArray.getString(R.styleable.ReusableGameCardView_cardLabel)
-            categoryLabel.text = labelText
+            labelText?.let { setCardLabel(it) }
 
             val strokeColor = typedArray.getColor(R.styleable.ReusableGameCardView_cardStrokeColor, Color.BLACK)
-            categoryImage.strokeColor = ColorStateList.valueOf(strokeColor)
-
             val overlayColor = typedArray.getColor(R.styleable.ReusableGameCardView_cardOverlayColor, "#80000000".toColorInt())
 
-            val colors = intArrayOf(Color.TRANSPARENT, overlayColor)
-            val gradientDrawable = GradientDrawable(
-                GradientDrawable.Orientation.TOP_BOTTOM,
-                colors
-            )
-
-            gradientOverlay.background = gradientDrawable
+            setColors(strokeColor, overlayColor)
 
         } finally {
             typedArray.recycle()
         }
+    }
+
+    fun setCardImage(imageResId: Int) {
+        if (imageResId != 0) {
+            categoryImage.setImageResource(imageResId)
+        }
+    }
+
+    fun setCardLabel(label: String) {
+        categoryLabel.text = label
+    }
+
+    fun setColorsByResId(strokeColorResId: Int, overlayColorResId: Int) {
+        val strokeColor = ContextCompat.getColor(context, strokeColorResId)
+        val overlayColor = ContextCompat.getColor(context, overlayColorResId)
+        setColors(strokeColor, overlayColor)
+    }
+
+    private fun setColors(strokeColor: Int, overlayColor: Int) {
+        categoryImage.strokeColor = ColorStateList.valueOf(strokeColor)
+
+        val colors = intArrayOf(Color.TRANSPARENT, overlayColor)
+        val gradientDrawable = GradientDrawable(
+            GradientDrawable.Orientation.TOP_BOTTOM,
+            colors
+        )
+        gradientOverlay.background = gradientDrawable
     }
 }
