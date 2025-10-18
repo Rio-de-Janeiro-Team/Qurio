@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Qurio</string>
+    <string name="category_music">موسيقى</string>
+    <string name="category_food_drink">طعام وشراب</string>
+    <string name="category_geography">جغرافيا</string>
+    <string name="category_general_knowledge">ثقافة عامة</string>
+    <string name="category_film_tv">أفلام وتلفزيون</string>
+    <string name="category_society_culture">مجتمع وثقافة</string>
+    <string name="category_history">تاريخ</string>
+    <string name="category_science">علوم</string>
+    <string name="category_sport_leisure">رياضة وترفيه</string>
+    <string name="category_arts_literature">فنون وآداب</string>
+    <string name="hello_blank_fragment">مرحباً بالوحدة الفارغة</string>
+    <string name="points_title">النقاط</string>
+    <string name="lives_title">الأرواح</string>
+    <string name="awards_title">الجوائز</string>
+    <string name="every_day_count">كل يوم له قيمة!</string>
+    <string name="play_now">العب الآن</string>
+</resources>

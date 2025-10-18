@@ -17,6 +17,11 @@
         android:label="fragment_questions"
         tools:layout="@layout/fragment_start_paly" />
     <fragment
+        android:id="@+id/GamesFragment"
+        android:name="com.example.qurio.presentation.view.GamesFragment"
+        android:label="fragment_games"
+        tools:layout="@layout/fragment_games" />
+    <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.example.qurio.presentation.fragment.OnBoardingFragment"
         android:label="OnBoardingFragment">
