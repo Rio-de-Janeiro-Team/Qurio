@@ -69,6 +69,7 @@
     </FrameLayout>
 
     <TextView
+        android:id="@+id/questionNumber"
         style="@style/title.small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,6 +81,7 @@
         app:layout_constraintTop_toTopOf="@+id/heptagon_shape" />
 
     <TextView
+        android:id="@+id/questionText"
         style="@style/body.medium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

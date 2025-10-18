@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/answerItem"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="12dp"
-    android:clickable="true"
-    android:focusable="true"
-    android:gravity="center"
-    android:background="@drawable/answer_background"
-    android:orientation="horizontal"
-    android:padding="12dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:id="@+id/textAnswer"
-        style="@style/body.small"
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.qurio.presentation.view.game.Answer" />
+
+        <variable
+            name="listener"
+            type="com.example.qurio.presentation.view.game.GameInterActionListener" />
+    </data>
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/answerItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"
         android:gravity="center"
-        android:textColor="@color/shade_primary"
-        tools:text = "Landlocked countries generally have lower transportation costs than coastal countries"/>
-</LinearLayout>
+        android:background="@drawable/answer_background"
+        android:orientation="horizontal"
+        android:onClick="@{(v) -> listener.onClickOnAnswer(item,v)}"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/textAnswer"
+            style="@style/body.small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/shade_primary"
+            android:text="@{item.answer}"
+            tools:text = "Landlocked countries generally have lower transportation costs than coastal countries"/>
+    </LinearLayout>
+</layout>

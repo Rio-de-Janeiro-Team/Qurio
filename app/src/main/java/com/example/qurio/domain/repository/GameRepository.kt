@@ -6,7 +6,12 @@ import com.example.qurio.domain.entity.Question
 
 interface GameRepository {
     suspend fun getAllGameCategories(): List<GameCategory>
-    suspend fun getQuestionsByCategoryId(genreId: Int, numberOfQuestions: Int): List<Question>
+    suspend fun getQuestionsByCategoryId(
+        genreId: Int,
+        numberOfQuestions: Int,
+        difficulty: DifficultyLevel = DifficultyLevel.EASY
+    ): List<Question>
+
     suspend fun getAllRecentGames(): List<Game>
     suspend fun saveGame(game: Game)
     suspend fun getSelectedDifficulty(): DifficultyLevel
