@@ -29,8 +29,16 @@
         <action
             android:id="@+id/action_onBoardingFragment_to_itemQuestionFragment"
             app:destination="@id/itemQuestionFragment" />
+        <action
+            android:id="@+id/action_onBoardingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
 
     </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.qurio.presentation.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 
 
 </navigation>
