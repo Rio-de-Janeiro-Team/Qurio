@@ -75,7 +75,7 @@ class OnBoardingFragment :  BaseFragment<
 
         }
         override fun onSwipeUp() {
-            findNavController().navigate(R.id.tempFragment)
+            findNavController().navigate(R.id.itemQuestionFragment)
         }
         override fun onLeftArrowClicked() {
             val pager = binding.viewPager
